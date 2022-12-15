@@ -11,7 +11,7 @@ document.addEventListener("submit", function(event){
             formSubmission(document, pilot.value, copilot.value, fuelLevel.value, cargoLevel.value)
         
    
-
+})
 
     let listedPlanets;
     let listedPlanetsResponse = myFetch();
@@ -24,5 +24,5 @@ document.addEventListener("submit", function(event){
         //console.log(planet)
         addDestinationInfo(document, planet.name, planet.diameter, planet.star, planet.distance, planet.moons, planet.image)
     })
-})
+
 });

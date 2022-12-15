@@ -22,11 +22,15 @@ function formSubmission(document, pilot, copilot, fuelLevel, cargoLevel) {
     }else if (validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number" || validateInput(Number(fuelLevel)) === "Not a Number" || validateInput(Number(cargoLevel)) === "Not a Number") {
         window.alert("Please enter valid inputs in all fields");
     }else if  (fuelLevel < 10000){
+        document.getElementById("pilotStatus").innerHTML = `Pilot ${pilot} Ready`;
+        document.getElementById("copilotStatus").innerHTML = `Co-pilot ${copilot} Ready`;
         document.getElementById("faultyItems").style.visibility = "visible";
         document.getElementById("fuelStatus").innerHTML = "Not enough fuel for journey";
         document.getElementById("launchStatus").innerHTML = "Shuttle not ready for launch";
         document.getElementById("launchStatus").style.color = "	#FF0000";
     }else if (cargoLevel > 10000){
+        document.getElementById("pilotStatus").innerHTML = `Pilot ${pilot} Ready`;
+        document.getElementById("copilotStatus").innerHTML = `Co-pilot ${copilot} Ready`;
         document.getElementById("faultyItems").style.visibility = "visible";
         document.getElementById("cargoStatus").innerHTML = "Too much mass for takeoff";
         document.getElementById("launchStatus").innerHTML = "Shuttle not ready for launch";
